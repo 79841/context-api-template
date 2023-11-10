@@ -30,10 +30,6 @@ export const CartContextProvider = ({ children }: TProps) => {
       setCart(newCart);
     },
 
-    getProductCount(productId: number) {
-      return cart[productId].count;
-    },
-
     getTotalPrice() {
       return Object.values(cart).reduce((total, { count, product }) => {
         return total + count * product.price;
