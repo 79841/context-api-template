@@ -1,5 +1,5 @@
 import { TProduct } from "./Product";
 
 export type TCart = {
-  [id: number]: { count: number; product: TProduct };
+  [id: TProduct["id"]]: { count: number; product: TProduct };
 };
